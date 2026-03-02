@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Loc-chan Trash</title>
+    <style>
+        /* 1. Phần nền và chữ tổng thể */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            text-align: center; 
+            background-color: #f0f2f5; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* 2. Cái hộp (Card) chứa nội dung */
+        .card { 
+            background: white; 
+            width: 350px; 
+            padding: 30px; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* Đổ bóng xịn hơn */
+        }
+
+        /* 3. Ảnh đại diện */
+        img { 
+            width: 120px; 
+            height: 120px;
+            border-radius: 50%; 
+            object-fit: cover;
+            border: 3px solid #007bff;
+            margin-bottom: 15px;
+        }
+
+        h1 { color: #333; margin-bottom: 5px; }
+        p { color: #666; line-height: 1.6; }
+
+        /* 4. Các nút mạng xã hội */
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            display: block;
+            padding: 12px;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px); /* Nhón chân lên khi di chuột vào */
+            opacity: 0.9;
+        }
+
+        /* Màu sắc riêng cho từng nút */
+        .twitter { background-color: #1DA1F2; }
+        .discord { background-color: #5865F2; }
+        .github { background-color: #333; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="29.png" alt="Avatar">
+        
+        <h1>Hello my name is Loc</h1>
+        <p>I’m an artist and I’m learning to code.</p>
+        <p>My hobbies are drawing, playing video games, listening to music, and watching anime.</p>
+
+        <div class="social-links">
+            <a href="https://twitter.com/THAY_BANG_TEN_TWITTER" target="_blank" class="btn twitter">Twitter</a>
+            <a href="https://discord.gg/THAY_BANG_MA_MOI" target="_blank" class="btn discord">Discord</a>
+            <a href="https://github.com/anhyou99" target="_blank" class="btn github">My GitHub</a>
+        </div>
+    </div>
+
+</body>
+</html>
