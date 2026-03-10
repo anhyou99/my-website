@@ -6,27 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Loc-chan Trash</title>
     <style>
-        /* 1. Phần nền và chữ tổng thể */
+        /* 1. Phần nền đại dương với hiệu ứng ánh sáng */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            background-color: #f0f2f5;
             margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
+            padding: 20px;
+            /* Hiệu ứng Ocean: Xanh đậm ở dưới, ánh sáng xanh lơ ở góc trên */
+            background: radial-gradient(circle at 20% 20%, rgba(100, 200, 255, 0.4) 0%, rgba(10, 45, 80, 1) 70%),
+                linear-gradient(180deg, #1e3799 0%, #0a3d62 100%);
+            background-attachment: fixed;
+            /* Giữ nền đứng yên khi cuộn trang */
         }
+
 
         /* 2. Cái hộp (Card) chứa nội dung */
         .card {
-            background: white;
+            /* Dải màu từ xanh dương sang tím nhạt - Đã giữ nguyên như yêu cầu của bạn trước đó */
+            background: linear-gradient(135deg, #cee1ff 0%, #c3cfe2 100%);
             width: 350px;
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             /* Đổ bóng xịn hơn */
+            /* Áp dụng chuyển động fadeIn */
+            animation: fadeIn 0.8s ease-out;
+
         }
 
         /* 3. Ảnh đại diện */
@@ -64,7 +73,7 @@
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
-            transition: transform 0.2s, opacity 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .btn:hover {
@@ -101,10 +110,30 @@
             }
         }
 
-        .card {
-            /* Áp dụng chuyển động vào card: chạy trong 0.8 giây */
-            animation: fadeIn 0.8s ease-out;
-            /* ... giữ nguyên các dòng cũ ... */
+        /* Bố cục Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Chia làm 2 cột */
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        /* Định dạng ảnh trong Gallery */
+        .art-item {
+            width: 100% !important;
+            height: 100px !important;
+            border-radius: 10px !important;
+            border: none !important;
+            object-fit: cover;
+            /* Giúp ảnh không bị méo */
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .art-item:hover {
+            transform: scale(1.1);
+            /* Phóng to ảnh khi di chuột vào */
         }
     </style>
 </head>
@@ -119,15 +148,25 @@
         <p>My hobbies are drawing, playing video games, listening to music, and watching anime.</p>
 
         <div class="social-links">
-            <a href="https://x.com/TrashLoc" target="_blank" class="btn" style="background-color: #1DA1F2;">Twitter</a>
+            <a href="#" onclick="alert('My Discord tag: Løc-chan trash#2220'); return false;"class="btn discord">Discord: Løc-chan trash#2220</a>
+            <a href="https://x.com/TrashLoc" target="_blank" class="btn twitter"style="background-color: #1DA1F2;">Twitter</a>
 
-            <a href="https://discord.gg/YourCode" target="_blank" class="btn"
-                style="background-color: #5865F2;">Discord</a>
+            <a href="https://github.com/anhyou99" target="_blank" class="btn github" style="background-color: #333;">My GitHub</a>
+            <a href="commission.html" class="btn" style="background-color: #ff4757;">Commission Page</a>
+        </div>
 
-            <a href="https://github.com/anhyou99" target="_blank" class="btn" style="background-color: #333;">My
-                GitHub</a>
+        <h3 style="margin-top: 25px; color: #333;">My Artworks</h3>
+        <div class="gallery">
+            <img src="tranh1.jpg" class="art-item" alt="Artwork 1">
+            <img src="tranh2.png" class="art-item" alt="Artwork 2">
+        </div>
+
+        <h3 style="margin-top: 25px; margin-bottom: 10px; color: #333;">My character</h3>
+        <div class="gallery">
+            <img src="character.jpg" class="art-item" alt="My Character">
         </div>
     </div>
+    
 
 </body>
 
